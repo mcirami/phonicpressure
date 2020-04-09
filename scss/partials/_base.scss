@@ -1,0 +1,91 @@
+html, body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    background: none;
+}
+
+body {
+    @include opensansregular;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    height: 100%;
+}
+
+a {
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+* {
+    position: relative;
+}
+
+.full_height {
+    height: 80vh;
+
+    @include media($mobile) {
+        height: 60vh
+    }
+}
+
+.full_width {
+    @include span-columns(12);
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+
+    &.banner {
+        max-width: 700px;
+    }
+}
+
+form {
+    background: rgba(255,255,255,.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+
+    label {
+        color: $white;
+        font-size: 14px;
+        line-height: 1.8;
+
+        @include media($mobile) {
+            font-size: 12px;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: 1px solid #d8d7d7;
+    }
+
+    .button {
+        @include opensansregular;
+        border: none;
+        width: 100%;
+        background: $red;
+        color: $white;
+        padding: 10px 34px;
+
+        &:hover {
+            background: $lightRed;
+            cursor:pointer;
+        }
+    }
+}

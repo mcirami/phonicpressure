@@ -1,0 +1,498 @@
+.header {
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    z-index: 999;
+
+    @include media($mobile) {
+        background: $black;
+    }
+
+    &.scroll {
+        background: $black;
+    }
+
+    .social_media {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+
+        @include media($mobile) {
+            position: relative;
+            top: 60px;
+            right: 0;
+            margin-right: 0;
+            z-index: 1;
+        }
+
+        span {
+            color: $lightGray;
+        }
+
+        a {
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 26px;
+                    top: 2px;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
+
+            &.facebook:hover:before {
+                background: url('../images/icon-facebook-red.png') no-repeat;
+                width: 14px;
+            }
+
+            &.instagram:hover:before {
+                background: url('../images/icon-instagram-red.png') no-repeat;
+                width: 26px;
+                left: 8px;
+            }
+
+            &.youtube:hover:before {
+                background: url('../images/icon-youtube-red.png') no-repeat;
+                width: 34px;
+                left: 8px;
+            }
+        }
+    }
+
+    nav {
+        a {
+            @include caviarbold;
+            font-size: 20px;
+            color: $gray;
+            margin: auto 0;
+
+            @include media($tablet) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: $red;
+            }
+
+            &.active {
+                color: $red;
+            }
+        }
+
+        li {
+            position: relative;
+
+            @include media($mobile) {
+                border-bottom: 1px solid;
+                border-color: rgba(255,255,255, .3);
+            }
+
+            &.logo {
+                margin-bottom: -76px;
+
+                @include media($mobile) {
+                    display: none;
+                }
+            }
+
+            &:first-child {
+
+                @include media($mobile) {
+                    border-top: 1px solid $white;
+                }
+
+                &:after {
+                    content: '/';
+                    color: $darkGray;
+                    font-size: 16px;
+                    position: absolute;
+                    right: -5px;
+                    top: 28px;
+
+                    @include media($mobile) {
+                        content: '';
+                    }
+                }
+            }
+
+            &:last-child {
+
+                @include media($mobile) {
+                    border-bottom: none;
+                }
+
+                &:before {
+                    content: '/';
+                    color: $darkGray;
+                    font-size: 16px;
+                    position: absolute;
+                    left: -1px;
+                    top: 28px;
+
+                    @include media($mobile) {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        padding: 0;
+    }
+
+    .navbar-nav {
+        @include media($mobile) {
+            padding-top: 80px;
+        }
+    }
+
+    .mobile_logo {
+        display: none;
+
+        @include media($mobile) {
+            display: block;
+            width: 195px;
+            float: left;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            margin-left: -95px;
+        }
+    }
+
+    .mobile_menu_icon {
+        display: none;
+        width: 30px;
+        height: 24px;
+        float: right;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        &.scroll {
+            @include media($mobile){
+                margin-top: 4px;
+            }
+        }
+
+        span {
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 1px;
+            }
+
+            &:nth-child(2) {
+                top: 10px;
+            }
+
+            &:nth-child(3) {
+                top: 19px;
+            }
+        }
+
+        &.open span {
+
+            &:nth-child(1) {
+                top: 12px;
+                -webkit-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                left: -60px;
+            }
+
+            &:nth-child(3) {
+                top: 12px;
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+
+        }
+
+        @include media($mobile){
+            display: block;
+        }
+    }
+}
+
+.hero_section {
+    background: url('../images/hero-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .music_player_section {
+        padding-top: 170px;
+        padding-bottom: 8%;
+
+        @include media($mobile) {
+            padding-top: 110px;
+        }
+
+        h2 {
+            @include oswaldregular;
+            font-size: 12em;
+            color: $white;
+
+            @include media($mobile) {
+                font-size: 8em;
+            }
+
+            @include media($smallMobile) {
+                font-size: 5em;
+            }
+
+            span {
+                color: $red;
+            }
+        }
+
+        .music_player {
+            width: 42%;
+            margin: 0 auto;
+
+            @include media($tablet) {
+                width: 80%;
+            }
+
+            @include media($mobile) {
+                width: 90%;
+            }
+
+            audio {
+                width: 100%;
+                height: 20px;
+            }
+
+            .controls {
+
+                .fwd, .rew, .stop {
+                    @include media($smallMobile) {
+                        width: 35px;
+                        height: 35px;
+                        margin: 5px 3px;
+                    }
+                }
+
+                .play, .pause {
+                    @include media($smallMobile) {
+                        width: 45px;
+                        height: 45px;
+                        margin: 0 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2.section_title {
+    color: $white;
+    font-size: 6em;
+
+    @include media($mobile) {
+        font-size: 3em;
+    }
+}
+
+.about_section {
+    background: $black;
+    text-align: center;
+
+    .my_row {
+        margin-bottom: 40px;
+    }
+
+    .column {
+        @include span-columns(6);
+        text-align: left;
+        border-bottom: 4px solid $darkerGray;
+
+        @include media($smallMobile) {
+            @include span-columns(4);
+        }
+
+        .text_bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('../images/text-bg.png') no-repeat;
+            background-size: 100% 100%;
+            color: $white;
+            padding: 6px 26px 6px 8px;
+
+            p {
+                @include opensanssemibold;
+                text-transform: uppercase;
+
+                @include media($mobile) {
+                    font-size: 12px;
+                }
+
+                span {
+                    @include opensansregular;
+                    font-size: 12px;
+                    text-transform: none;
+                }
+            }
+        }
+
+        .image_wrap {
+            padding: 10px;
+            border: 1px solid $red;
+
+            img {
+                border: 1px solid $red;
+            }
+        }
+
+        .description {
+            color: $gray;
+            padding: 10px 0 20px;
+        }
+    }
+}
+
+.media_section {
+    background: $white;
+
+    h2.section_title {
+        color: $black;
+    }
+
+    #carouselControls {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .video_wrapper {
+        @include span-columns(12);
+        padding-bottom: 56.25%;
+        height: 0;
+        position: relative;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.shows_section {
+    background: url('../images/shows-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    p {
+        color: $pink;
+    }
+
+    h4 {
+       @include opensanssemibold;
+        font-size: 14px;
+        color: $white;
+    }
+
+    h5 {
+        font-size: 14px;
+        color: $white;
+    }
+
+    li {
+        border-top: 1px solid $lightRed;
+        border-bottom: 1px solid $lightRed;
+        padding: 20px 0;
+        margin-bottom: 40px;
+
+        @include media($smallMobile) {
+            padding: 10px 0;
+        }
+
+        .column {
+            @include span-columns(7);
+
+            @include media($smallMobile) {
+                @include span-columns(4);
+            }
+
+            &:first-child {
+                @include span-columns(5);
+
+                @include media($smallMobile) {
+                    @include span-columns(4);
+                }
+            }
+        }
+    }
+}
+
+.contact_section {
+    background: url('../images/contact-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .form_wrap {
+        width: 35%;
+        margin: 0 auto;
+
+        @include media($tablet) {
+            width: 60%;
+        }
+
+        @include media($mobile) {
+            width: 80%;
+        }
+
+        @include media($smallMobile) {
+            width: 90%;
+        }
+    }
+
+    .success_message {
+        color: $white;
+    }
+
+}
+
+footer {
+    background: $white;
+
+    p {
+        font-size: 14px;
+        color: $lightGray;
+    }
+}

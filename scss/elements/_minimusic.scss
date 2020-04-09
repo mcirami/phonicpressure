@@ -1,0 +1,251 @@
+/*
+    AUTHOR: Sam Johnson
+    MINIMusic Player
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #141942;
+}
+
+/* HTML5 Audio player with playlist styles */
+.example, .example2 {
+    margin: 50px auto 0;
+    width: 390px;
+}
+
+.player {
+    background: #35302d;
+    height: 220px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.title, .artist {
+    @include opensanssemibold;
+    left: 167px;
+    position: absolute;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    top: 23px;
+}
+.artist {
+    color: #EEEEEE;
+    font-size: 12px;
+    top: 40px;
+}
+.pl {
+    background: url(../images/playlist.png) no-repeat;
+    cursor: pointer;
+    height: 40px;
+    left: 330px;
+    position: absolute;
+    top: 20px;
+    width: 39px;
+}
+.pl:hover {
+    top: 21px;
+}
+.cover {
+    border-radius: 5px 5px 5px 5px;
+    height: 82px;
+    left: 20px;
+    position: absolute;
+    top: 30px;
+    width: 94px;
+    background-size: 100%;
+}
+.controls {
+    cursor: pointer;
+    left: 0px;
+    position: absolute;
+    top: 65px;
+    left: 122px;
+}
+.controls .play, .controls .pause {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px 0px 5px;
+}
+.controls .play, .controls .pause, .controls .rew, .controls .fwd, .controls .stop {
+   text-indent: -10000px;
+    border: none;
+    float: left;
+}
+.controls .rew, .controls .fwd, .controls .stop {
+    width: 50px;
+    height: 50px;
+    margin: 5px 5px 5px 5px;
+}
+.controls .play {
+    background: url(../images/play.png) no-repeat;
+    background-size: 90%;
+}
+.controls .pause {
+    background: url(../images/pause.png) no-repeat;
+    background-size: 90%;
+    display: none;
+}
+.controls .rew {
+    background: url(../images/rewind.png) no-repeat;
+    background-size: 90%;
+}
+.controls .fwd {
+    background: url(../images/next.png) no-repeat;
+    background-size: 90%;
+}
+.controls .stop {
+    background: url(../images/stop.png) no-repeat;
+    background-size: 90%;
+}
+.hidden {
+    display: none;
+}
+.controls .visible {
+    display: block;
+}
+.volume {
+    height: 11px;
+    left: 25px;
+    position: absolute;
+    top: 142px;
+    width: 140px;
+}
+.mute  .volume-btn {
+    background: url(../images/volume-off.png) no-repeat;
+}
+.volume-btn {
+    background: url(../images/volume-up.png) no-repeat;
+    background-size: 100%;
+    height: 20px;
+    width: 20px;
+    float: left;
+    position: relative;
+    top: -4px;
+}
+.volume-adjust {
+    height: 11px;
+    position: relative;
+    width: 80%;
+    background: #fff;
+    float: right;
+}
+.volume-adjust  > div > div {
+    height: 11px;
+    background: $gray;
+}
+.progressbar
+{
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    right: 6.875em; /* 110 */
+     height: 15px;
+    left: 0px;
+    position: absolute;
+    width: 92%;
+    top: 170px;
+    margin: 0 3%;
+}
+.novolume .progressbar
+{
+    right: 4.375em; /* 70 */
+}
+.progressbar div
+{
+    width: 0%;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.bar-loaded
+{
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+.bar-played
+{
+    background: $gray;
+    z-index: 2;
+}
+.timeHolder {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    bottom: 10px;
+    position: absolute;
+    margin: 0px 5%;
+    width: 90%;
+}
+.time-current, .time-duration, .time-separator {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}
+.volume .ui-slider-handle {
+    background: url("../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+    height: 13px;
+    width: 13px;
+}
+.playlist {
+    background-color: #1b1917;
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: 0px auto;
+}
+.playlist li,
+.playlist div {
+    color: #151B48;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-bottom: 1px solid $gray;
+}
+.playlist li > a,
+.playlist div > a {
+   color: $white;
+   text-decoration: none;
+}
+.playlist li.active,
+.playlist div.active {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b1917+48,302d29+100 */
+    background: #1b1917; /* Old browsers */
+    background: -moz-linear-gradient(top, #1b1917 30%, #262320 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1b1917 30%,#262320 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,#1b1917 30%, #262320 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b1917', endColorstr='#302d29',GradientType=0 ); /* IE6-9 */
+}
+
+.playlist li.active > a {
+    @include opensansbold;
+}
+
+.playlist li:hover {
+    cursor: pointer;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b1917+48,302d29+100 */
+    background: #1b1917; /* Old browsers */
+    background: -moz-linear-gradient(top, #1b1917 30%, #262320 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1b1917 30%,#262320 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,#1b1917 30%, #262320 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b1917', endColorstr='#302d29',GradientType=0 ); /* IE6-9 */
+
+    a {
+        @include opensansbold;
+    }
+}
+
+.player .info {
+    margin-left: -40px;
+}
