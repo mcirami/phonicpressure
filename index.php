@@ -16,15 +16,15 @@ include 'header.php';
                     </a>
                     <div class="collapse navbar-collapse justify-content-center" id="navToggler">
                         <div class="social_media d-flex d-md-none align-content-center justify-content-center">
-                            <a class="facebook" href="https://www.facebook.com/phonicpressure/">
+                            <a target="_blank" class="facebook" href="https://www.facebook.com/phonicpressure">
                                 <img class="pr-2" src="images/icon-facebook.png" alt="">
                             </a>
                             <span>|</span>
-                            <a class="instagram" href="#">
+                            <a target="_blank" class="instagram" href="https://www.instagram.com/phonicpressure">
                                 <img class="px-2" src="images/icon-instagram.png" alt="">
                             </a>
                             <span>|</span>
-                            <a class="youtube" href="#">
+                            <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UClT3XD0ym4sQjOrVOZW5bUw">
                                 <img class="pl-2" src="images/icon-youtube.png" alt="">
                             </a>
                         </div>
@@ -55,15 +55,15 @@ include 'header.php';
                     </a>
                 </div>
                 <div class="social_media d-none d-md-flex align-content-center justify-content-center">
-                    <a class="facebook" href="https://www.facebook.com/phonicpressure/">
+                    <a target="_blank" class="facebook" href="https://www.facebook.com/phonicpressure/">
                         <img class="pr-2" src="images/icon-facebook.png" alt="">
                     </a>
                     <span>|</span>
-                    <a class="instagram" href="#">
+                    <a target="_blank" class="instagram" href="https://www.instagram.com/phonicpressure">
                         <img class="px-2" src="images/icon-instagram.png" alt="">
                     </a>
                     <span>|</span>
-                    <a class="youtube" href="#">
+                    <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UClT3XD0ym4sQjOrVOZW5bUw">
                         <img class="pl-2" src="images/icon-youtube.png" alt="">
                     </a>
                 </div>
@@ -198,14 +198,20 @@ include 'header.php';
                 <h2 class="text-uppercase section_title mb-4">Upcoming Shows</h2>
                 <ul class="list-unstyled full_width animatedParent animateOnce">
                     <li class="full_width animated fadeInLeft">
-                        <div class="column text-left text-sm-center d-block d-sm-flex justify-content-start">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="text-uppercase">Due to COVID-19 all shows are on hold</h4>
+                            </div>
+                        </div>
+
+                        <!--<div class="column text-left text-sm-center d-block d-sm-flex justify-content-start">
                             <p class="mr-5">Fri Nov 1</p>
                             <p>9:00 pm</p>
                         </div>
                         <div class="column d-block d-sm-flex justify-content-end text-left text-sm-center">
                             <h4 class="mr-1 mb-1 mb-sm-0">The Way Out Club,</h4>
                             <h5>2525 S Jefferson Ave St. Louis, MO 63104</h5>
-                        </div>
+                        </div>-->
                     </li>
                 </ul>
             </div>
