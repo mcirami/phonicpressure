@@ -37,7 +37,7 @@ include 'header.php';
                             </li>
                             <li class="nav-item logo">
                                 <a class="nav-link p-0 text-uppercase" href="#music">
-                                    <img src="images/logo.jpg" alt="">
+                                    <img src="images/logo.png" alt="">
                                 </a>
                             </li>
                             <li class="nav-item d-flex align-content-center pr-2">

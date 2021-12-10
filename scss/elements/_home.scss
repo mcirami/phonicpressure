@@ -92,10 +92,15 @@
             }
 
             &.logo {
-                margin-bottom: -76px;
+                margin-bottom: -54px;
+                padding: 0 20px;
 
                 @include media($mobile) {
                     display: none;
+                }
+
+                img {
+                    max-width: 360px;
                 }
             }
 
