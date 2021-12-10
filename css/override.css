@@ -1,0 +1,22 @@
+.header nav li.logo {
+    margin-bottom: -50px;
+    padding: 0 20px;
+}
+
+li.logo img {
+    max-width: 360px;
+}
+
+.header nav li:last-child:before {
+    left: -2px;
+    top: 56px;
+}
+
+.header nav li:first-child:after {
+    top: 56px;
+    right: -3px;
+}
+
+.hero_section .music_player_section {
+    padding-top: 200px;
+}

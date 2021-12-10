@@ -8,6 +8,7 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap/bootstrap-formhelpers.min.css" rel="stylesheet" />
     <link href="css/main.min.css" rel="stylesheet" />
+	<link href="css/override.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/animations.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
