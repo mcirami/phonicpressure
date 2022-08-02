@@ -22,6 +22,10 @@ body {
     position: relative;
     width: 100%;
     z-index: 2;
+    border-top-right-radius: 12px;
+    -webkit-border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
 }
 .title, .artist {
     @include opensanssemibold;
@@ -44,7 +48,7 @@ body {
     top: 40px;
 }
 .pl {
-    background: url(../images/playlist.png) no-repeat;
+    background: url(../../images/playlist.png) no-repeat;
     cursor: pointer;
     height: 40px;
     left: 330px;
@@ -87,24 +91,24 @@ body {
     margin: 5px 5px 5px 5px;
 }
 .controls .play {
-    background: url(../images/play.png) no-repeat;
+    background: url(../../images/play.png) no-repeat;
     background-size: 90%;
 }
 .controls .pause {
-    background: url(../images/pause.png) no-repeat;
+    background: url(../../images/pause.png) no-repeat;
     background-size: 90%;
     display: none;
 }
 .controls .rew {
-    background: url(../images/rewind.png) no-repeat;
+    background: url(../../images/rewind.png) no-repeat;
     background-size: 90%;
 }
 .controls .fwd {
-    background: url(../images/next.png) no-repeat;
+    background: url(../../images/next.png) no-repeat;
     background-size: 90%;
 }
 .controls .stop {
-    background: url(../images/stop.png) no-repeat;
+    background: url(../../images/stop.png) no-repeat;
     background-size: 90%;
 }
 .hidden {
@@ -121,10 +125,10 @@ body {
     width: 140px;
 }
 .mute  .volume-btn {
-    background: url(../images/volume-off.png) no-repeat;
+    background: url(../../images/volume-off.png) no-repeat;
 }
 .volume-btn {
-    background: url(../images/volume-up.png) no-repeat;
+    background: url(../../images/volume-up.png) no-repeat;
     background-size: 100%;
     height: 20px;
     width: 20px;
@@ -194,7 +198,7 @@ body {
     float: left;
 }
 .volume .ui-slider-handle {
-    background: url("../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+    //background: url("../../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
     height: 13px;
     width: 13px;
 }
@@ -205,6 +209,10 @@ body {
     width: 100%;
     z-index: 1;
     margin: 0px auto;
+    border-bottom-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
 }
 .playlist li,
 .playlist div {
@@ -212,6 +220,10 @@ body {
     cursor: pointer;
     padding: 8px 20px;
     border-bottom: 1px solid $gray;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 .playlist li > a,
 .playlist div > a {

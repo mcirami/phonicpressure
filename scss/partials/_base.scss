@@ -50,10 +50,6 @@ img {
 }
 
 form {
-    background: rgba(255,255,255,.1);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     padding: 20px;
 
     label {
@@ -66,26 +62,50 @@ form {
         }
     }
 
-    input {
+    input.form-control {
         width: 100%;
         height: 40px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
         border: 1px solid #d8d7d7;
+        font-size: 16px;
     }
 
-    .button {
-        @include opensansregular;
-        border: none;
-        width: 100%;
+    textarea.form-control {
+        font-size: 16px;
+    }
+}
+
+.button {
+    @include opensansregular;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+
+    &.red {
         background: $red;
         color: $white;
-        padding: 10px 34px;
 
         &:hover {
             background: $lightRed;
             cursor:pointer;
+            color: $white;
+        }
+    }
+
+    &.white {
+        background: $white;
+        color: $red;
+
+        &:hover {
+            background: $lightRed;
+            cursor:pointer;
+            color: $white;
         }
     }
 }

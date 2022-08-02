@@ -54,6 +54,21 @@
     font-weight: 700;
 }
 
+@mixin montreg {
+    font-family: 'mont-reg',  sans-serif;
+    font-weight: 300;
+}
+
+@mixin montmed {
+    font-family: 'mont-med',  sans-serif;
+    font-weight: 500;
+}
+
+@mixin truckin {
+    font-family: 'truckin',  sans-serif;
+    font-weight: 700;
+}
+
 @mixin gradient-text($gradient, $bg : 'light') {
     @supports(mix-blend-mode: lighten) {
         display: inline-block;

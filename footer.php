@@ -1,4 +1,4 @@
-        <footer class="py-4 full_width">
+        <footer class="py-4 full_width text-center">
             <div class="my_container">
                 <p>&copy; Copyright 2019 phonicpressure.com All Rights Reserved</p>
             </div>

@@ -6,89 +6,92 @@ include 'header.php';
 
 
         <div class="full_width hero_section">
+	            <div class="bg_image">
+		            <img src="images/hero-bg.jpg" alt="">
+	            </div>
+	        
+	            <div id="global_header" class="header full_width">
+		            <div class="my_container">
+		                <nav class="navbar navbar-expand-md p-0 pt-md-4 pb-0">
+			                <div class="mobile_logo navigation">
+			                    <a href="#music" class="mobile_logo_click">
+			                        <img src="images/logo.png" alt="">
+			                    </a>
+			                </div>
+			                <div class="social_media">
+				                <ul class="d-flex align-content-center justify-content-center mb-0">
+					                <li>
+						                <a target="_blank" class="facebook" href="https://www.facebook.com/phonicpressure/">
+							                <img src="images/icon-facebook.png" alt="">
+						                </a>
+					                </li>
+					                <li>
+						                <a target="_blank" class="instagram" href="https://www.instagram.com/phonicpressure">
+							                <img src="images/icon-instagram.png" alt="">
+						                </a>
+					                </li>
+					                <li>
+						                <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UClT3XD0ym4sQjOrVOZW5bUw">
+							                <img src="images/icon-youtube.png" alt="">
+						                </a>
+					                </li>
+				                </ul>
+			                </div>
+			                <a class="mobile_menu_icon mt-0" aria-controls="navbarNav" href="#">
+				                <span></span>
+				                <span></span>
+				                <span></span>
+			                </a>
+		                    <div class="collapse navbar-collapse justify-content-center" id="navToggler">
 
-            <div id="global_header" class="py-2 header full_width">
-                <nav class="navbar navbar-expand-md">
-                    <a class="mobile_menu_icon" aria-controls="navbarNav" href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                    <div class="collapse navbar-collapse justify-content-center" id="navToggler">
-                        <div class="social_media d-flex d-md-none align-content-center justify-content-center">
-                            <a target="_blank" class="facebook" href="https://www.facebook.com/phonicpressure">
-                                <img class="pr-2" src="images/icon-facebook.png" alt="">
-                            </a>
-                            <span>|</span>
-                            <a target="_blank" class="instagram" href="https://www.instagram.com/phonicpressure">
-                                <img class="px-2" src="images/icon-instagram.png" alt="">
-                            </a>
-                            <span>|</span>
-                            <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UClT3XD0ym4sQjOrVOZW5bUw">
-                                <img class="pl-2" src="images/icon-youtube.png" alt="">
-                            </a>
-                        </div>
-                        <ul class="navbar-nav navigation">
-                            <li class="nav-item d-flex align-content-center pr-2">
-                                <a class="nav-link text-uppercase" href="#about">About</a>
-                            </li>
-                            <li class="nav-item d-flex align-content-center pl-0 pl-md-2">
-                                <a class="nav-link text-uppercase pr-0" href="#media">Media</a>
-                            </li>
-                            <li class="nav-item logo">
-                                <a class="nav-link p-0 text-uppercase" href="#music">
-                                    <img src="images/logo.png" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item d-flex align-content-center pr-2">
-                                <a class="nav-link text-uppercase pl-0" href="#shows">Shows</a>
-                            </li>
-                            <li class="nav-item d-flex align-content-center pl-0 pl-md-2">
-                                <a class="nav-link text-uppercase" href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="mobile_logo navigation">
-                    <a href="#music" class="mobile_logo_click">
-                        <img src="images/logo.jpg" alt="">
-                    </a>
-                </div>
-                <div class="social_media d-none d-md-flex align-content-center justify-content-center">
-                    <a target="_blank" class="facebook" href="https://www.facebook.com/phonicpressure/">
-                        <img class="pr-2" src="images/icon-facebook.png" alt="">
-                    </a>
-                    <span>|</span>
-                    <a target="_blank" class="instagram" href="https://www.instagram.com/phonicpressure">
-                        <img class="px-2" src="images/icon-instagram.png" alt="">
-                    </a>
-                    <span>|</span>
-                    <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UClT3XD0ym4sQjOrVOZW5bUw">
-                        <img class="pl-2" src="images/icon-youtube.png" alt="">
-                    </a>
-                </div>
-            </div><!-- header -->
-            <div id="music" class="full_width music_player_section animatedParent animateOnce page-section">
-                <h2 class="text-uppercase text-center animated growIn">Jam <span>Out</span></h2>
-                <div class="music_player">
-                    <div id="player">
-                        <ul class="playlist">
-                            <?php
-                                $count = 1;
-                                $fileDir = "audio";
-                                $files = scandir($fileDir);
-                                foreach($files as $file) {
-                                    if(substr($file,-4) == ".mp3"){
-                                        echo "<li data-cover='images/cover.png' data-artist='Phonic Pressure'><a href='$fileDir/$file'><span>$count.</span>".substr($file,0,-4)."</a></li>";
-                                        $count++;
-                                    }
-                                }
-                                ?>
-                        </ul>
+		                        <ul class="navbar-nav navigation pb-2">
+			                        <li class="nav-item logo">
+				                        <a class="nav-link p-0 text-uppercase" href="#music">
+					                        <img src="images/logo.png" alt="">
+				                        </a>
+			                        </li>
+		                            <li class="nav-item d-flex align-content-end">
+		                                <a class="nav-link text-uppercase" href="#about">About</a>
+		                            </li>
+		                            <li class="nav-item d-flex align-content-end">
+		                                <a class="nav-link text-uppercase" href="#media">Media</a>
+		                            </li>
+		                            <li class="nav-item d-flex align-content-end">
+		                                <a class="nav-link text-uppercase" href="#shows">Shows</a>
+		                            </li>
+			                        <li class="nav-item d-flex align-content-end">
+				                        <a class="nav-link text-uppercase" href="https://merch.phonicpressure.com/" target="_blank">Merch</a>
+			                        </li>
+		                            <li class="nav-item d-flex align-content-end">
+		                                <a class="nav-link text-uppercase pr-0" href="#contact">Contact</a>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </nav>
+		            </div>
+	            </div><!-- global_header -->
+	            <div id="music" class="full_width music_player_section animatedParent animateOnce page-section">
+	                <h2 class="text-uppercase text-center animated growIn">jam <span>out</span></h2>
+	                <div class="music_player">
+	                    <div id="player">
+	                        <ul class="playlist">
+	                            <?php
+	                                $count = 1;
+	                                $fileDir = "audio";
+	                                $files = scandir($fileDir);
+	                                foreach($files as $file) {
+	                                    if(substr($file,-4) == ".mp3"){
+	                                        echo "<li data-cover='images/album-cover.jpg' data-artist='Phonic Pressure'><a href='$fileDir/$file'><span>$count.</span>".substr($file,0,-4)."</a></li>";
+	                                        $count++;
+	                                    }
+	                                }
+	                                ?>
+	                        </ul>
 
-                    </div>
-                </div>
-            </div>
+	                    </div>
+	                </div>
+	            </div>
+	  
         </div><!-- hero_section -->
         <div id="about" class="about_section full_width py-3 py-md-5 page-section">
             <div class="my_container">
@@ -156,29 +159,34 @@ include 'header.php';
                 <h2 class="text-uppercase section_title mb-4">Media</h2>
                 <div id="carouselControls" class="carousel slide animated flipInY" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+	                    <div class="carousel-item active">
+		                    <div class="video_wrapper">
+			                    <iframe src="https://www.youtube.com/embed/nk4nkPs_5xY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		                    </div>
+	                    </div>
+                        <div class="carousel-item">
                             <div class="video_wrapper">
-                                <iframe src="https://www.youtube.com/embed/10tZ707IqAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/10tZ707IqAg?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="video_wrapper">
-                                <iframe src="https://www.youtube.com/embed/m7qxPPk7Z8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/m7qxPPk7Z8c?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="video_wrapper">
-                                <iframe src="https://www.youtube.com/embed/-Z89UlnbCCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/-Z89UlnbCCk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="video_wrapper">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/I83WThj5PWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/I83WThj5PWE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="video_wrapper">
-                                <iframe src="https://www.youtube.com/embed/yQWHigoLHJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/yQWHigoLHJM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -198,82 +206,56 @@ include 'header.php';
                 <h2 class="text-uppercase section_title mb-4">Upcoming Shows</h2>
                 <ul class="list-unstyled full_width animatedParent animateOnce">
                     <li class="full_width animated fadeInLeft">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="text-uppercase">Due to COVID-19 all shows are on hold</h4>
-                            </div>
+                        <div class="my_row">
+	                        <div class="column text-left text-sm-center">
+		                        <p class="mr-1">Fri Sept 2nd - </p>
+		                        <p>Time TBD</p>
+	                        </div>
+	                        <div class="column text-center">
+		                        <h3 class="mr-1 mb-1 mb-sm-0">Midwest Bearfest</h3>
+		                        <h3>26920 Nn-333, Waynesville, MO</h3>
+	                        </div>
+	                        <div class="column text-left">
+		                        <a class="button white text-uppercase" href="https://www.universe.com/events/midwest-bearfest-2022-tickets-G6HDN5?fbclid=IwAR1-Hw-0CVi3v4ZZGB-Ih0opr_iq0d9KTDAMdVH34sQt2vw7vmDPV1zbi9U" target="_blank">GET TICKETS NOW!</a>
+	                        </div>
                         </div>
-
-                        <!--<div class="column text-left text-sm-center d-block d-sm-flex justify-content-start">
-                            <p class="mr-5">Fri Nov 1</p>
-                            <p>9:00 pm</p>
-                        </div>
-                        <div class="column d-block d-sm-flex justify-content-end text-left text-sm-center">
-                            <h4 class="mr-1 mb-1 mb-sm-0">The Way Out Club,</h4>
-                            <h5>2525 S Jefferson Ave St. Louis, MO 63104</h5>
-                        </div>-->
                     </li>
                 </ul>
             </div>
         </div>
         <div id="contact" class="full_width contact_section py-3 py-md-5 page-section">
             <h2 class="text-uppercase section_title mb-4 text-center">Contact</h2>
-            <?php if (!isset($_POST['submit']) || $mailSent == false) : ?>
 
                 <div class="form_wrap animatedParent animateOnce">
 
-                    <form class="animated bounceInDown" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                    <form id="contact-us" class="animated bounceInDown" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
 
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input name="name" type="text" class="form-control" id="name" aria-describedby="name"
-                                   value="<?php if (isset($_POST['name'])) { echo $_POST['name']; } ?>" required>
-
-                            <div class="errors">
-                                <p class="text-danger"><?php echo $nameErr; ?></p>
-                            </div>
+                            <input name="name" type="text" class="form-control" id="name" aria-describedby="name" value="" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control" id="email"
-                                   value="<?php if (isset($_POST['email'])) { echo $_POST['email'];} ?>" required>
-
-                            <div class="errors">
-                                <p class="text-danger"><?php echo $emailErr; ?></p>
-                            </div>
+                            <input type="email" name="email" class="form-control" id="email" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" name="phone" id="phone" class="bfh-phone form-control" data-format="+1 (ddd) ddd-dddd" value="<?php if (isset($_POST['email'])) { echo $_POST['email'];} ?>">
-
-                            <div class="errors">
-                                <p class="text-danger"><?php echo $phoneErr; ?></p>
-                            </div>
+                            <input type="text" name="phone" id="phone" class="bfh-phone form-control" data-format="+1 (ddd) ddd-dddd" value="">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea rows=6 name="message" class="form-control" id="message"
-                                      required><?php if (isset($_POST['message'])) { echo $_POST['message'];} ?></textarea>
-
-                            <div class="errors">
-                                <p class="text-danger"><?php echo $userMessageErr; ?></p>
-                            </div>
+                            <textarea rows=6 name="message" class="form-control" id="message" required></textarea>
                         </div>
 
-                        <button type="submit" class="button text-uppercase">Submit</button>
+                        <button type="submit" class="button red text-uppercase">Submit</button>
                     </form>
+                    <div id="spinner" class="text-center">
+						<div class="spinner-border" role="status">
+						</div>
+					</div>
 
                 </div>
-
-            <?php else : ?>
-
-                <div class="text-center success_message">
-                    <h2 class="text-uppercase">Thanks for Your Inquiry!</h2>
-                    <p>We will get back to you as soon as possible!</p>
-                </div>
-
-            <?php endif; ?>
         </div>
 
 <?php

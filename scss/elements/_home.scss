@@ -9,69 +9,32 @@
 
     &.scroll {
         background: $black;
-    }
 
-    .social_media {
-        position: absolute;
-        top: 10px;
-        right: 50px;
+        li.logo {
+            margin-bottom: -28px;
 
-        @include media($mobile) {
-            position: relative;
-            top: 60px;
-            right: 0;
-            margin-right: 0;
-            z-index: 1;
-        }
-
-        span {
-            color: $lightGray;
-        }
-
-        a {
-            position: relative;
-
-            &:hover {
-                cursor: pointer;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    height: 26px;
-                    top: 2px;
-                    left: 0;
-                    z-index: 1;
-                }
-            }
-
-            &.facebook:hover:before {
-                background: url('../images/icon-facebook-red.png') no-repeat;
-                width: 14px;
-            }
-
-            &.instagram:hover:before {
-                background: url('../images/icon-instagram-red.png') no-repeat;
-                width: 26px;
-                left: 8px;
-            }
-
-            &.youtube:hover:before {
-                background: url('../images/icon-youtube-red.png') no-repeat;
-                width: 34px;
-                left: 8px;
+            img {
+                max-width: 195px;
             }
         }
     }
 
     nav {
         a {
-            @include caviarbold;
+            @include montmed;
             font-size: 20px;
             color: $gray;
-            margin: auto 0;
+            margin-top: auto;
 
             @include media($tablet) {
                 font-size: 18px;
+            }
+
+            @include media($mobile) {
+                padding: 15px 0;
+                width: 100%;
+                display: block;
+                text-align: center;
             }
 
             &:hover {
@@ -85,6 +48,7 @@
 
         li {
             position: relative;
+            margin-right: 2%;
 
             @include media($mobile) {
                 border-bottom: 1px solid;
@@ -92,15 +56,37 @@
             }
 
             &.logo {
-                margin-bottom: -54px;
+                margin-bottom: -39px;
                 padding: 0 20px;
+                margin-right: auto;
+                transition: 500ms all linear;
+                -moz-transition: 500ms all linear;
+                -webkit-transition: 500ms all linear;
+                -o-transition: 500ms all linear;
 
                 @include media($mobile) {
                     display: none;
                 }
 
                 img {
-                    max-width: 360px;
+                    max-width: 265px;
+                    transition: 500ms all linear;
+                    -moz-transition: 500ms all linear;
+                    -webkit-transition: 500ms all linear;
+                    -o-transition: 500ms all linear;
+                }
+            }
+
+            &:after {
+                content: '/';
+                color: $darkGray;
+                font-size: 16px;
+                position: absolute;
+                right: -15px;
+                bottom: 5px;
+
+                @include media($mobile) {
+                    content: '';
                 }
             }
 
@@ -111,38 +97,133 @@
                 }
 
                 &:after {
-                    content: '/';
-                    color: $darkGray;
-                    font-size: 16px;
-                    position: absolute;
-                    right: -5px;
-                    top: 28px;
-
-                    @include media($mobile) {
-                        content: '';
-                    }
+                    content: '';
                 }
             }
 
             &:last-child {
+                margin-right: 0;
 
                 @include media($mobile) {
                     border-bottom: none;
                 }
 
-                &:before {
-                    content: '/';
-                    color: $darkGray;
-                    font-size: 16px;
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .social_media {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        z-index: 1;
+
+        @include media($mobile) {
+            position: relative;
+            float: right;
+            top: 0;
+            right: 0;
+            margin-left: auto;
+            padding-right: 20px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: 0 10px;
+
+                @include media($mobile) {
+                    padding: 0 8px;
+                    border: none;
+                }
+
+                &:after {
+                    content: '|';
                     position: absolute;
-                    left: -1px;
-                    top: 28px;
+                    color: $lightGray;
+                    right: -3px;
+                    font-size: 16px;
+                    top: 0;
 
                     @include media($mobile) {
+                        right: -5px;
+                    }
+                }
+
+                &:first-child {
+                    border: none;
+
+                    &:after {
+
+                        @include media($mobile) {
+                            content: '|';
+                            right: -5px;
+                        }
+                    }
+                }
+
+                &:last-child {
+
+                    &:after {
                         content: '';
+                        padding-right: 0;
                     }
                 }
             }
+        }
+
+        a {
+            position: relative;
+            display: block;
+
+            @include media($mobile) {
+                padding: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 26px;
+                    top: 1px;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+
+            &.facebook {
+
+                &:hover:before {
+                    background: url('../../images/icon-facebook-red.png') no-repeat;
+                    background-size: 100%;
+                }
+            }
+
+            &.instagram {
+
+                &:hover:before {
+                    background: url('../../images/icon-instagram-red.png') no-repeat;
+                    background-size: 100%;
+                }
+            }
+
+            &.youtube {
+
+                &:hover:before {
+                    background: url('../../images/icon-youtube-red.png') no-repeat;
+                    background-size: 100%;
+                }
+
+            }
+
+
         }
     }
 
@@ -151,9 +232,9 @@
     }
 
     .navbar-nav {
-        @include media($mobile) {
-            padding-top: 80px;
-        }
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+        width: 100%;
     }
 
     .mobile_logo {
@@ -161,12 +242,11 @@
 
         @include media($mobile) {
             display: block;
-            width: 195px;
-            float: left;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            margin-left: -95px;
+            margin-bottom: -34px;
+        }
+
+        img {
+            max-width: 165px;
         }
     }
 
@@ -184,6 +264,10 @@
         -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         cursor: pointer;
+
+        @include media($mobile) {
+            padding: 0;
+        }
 
         &.scroll {
             @include media($mobile){
@@ -253,9 +337,54 @@
 }
 
 .hero_section {
-    background: url('../images/hero-bg.jpg') no-repeat;
+    /*background: url('../../images/hero-bg.jpg') no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center;*/
+
+    .bg_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        animation: pulse 500ms 3;
+        transform: scale(1);
+
+        &.play {
+            animation: pulse 2s infinite;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100%;
+            height: 1000px;
+
+            @include media($mobile) {
+                height: calc(130vw - 20px);
+            }
+
+            @include media($smallMobile) {
+                height: 180vw;
+            }
+
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+
+        70% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0.95);
+        }
+    }
 
     .music_player_section {
         padding-top: 170px;
@@ -266,16 +395,25 @@
         }
 
         h2 {
-            @include oswaldregular;
+            @include truckin;
+            text-shadow: 2px 1px #ff0000;
             font-size: 12em;
             color: $white;
 
-            @include media($mobile) {
+            @include media($desktop) {
+                font-size: 10em;
+            }
+
+            @include media($tablet) {
                 font-size: 8em;
             }
 
+            @include media($mobile) {
+                font-size: 7em;
+            }
+
             @include media($smallMobile) {
-                font-size: 5em;
+                font-size: 4em;
             }
 
             span {
@@ -325,6 +463,11 @@
 h2.section_title {
     color: $white;
     font-size: 6em;
+    text-shadow: 2px 1px #ff0000;
+
+    @include media($tablet) {
+        font-size: 4em;
+    }
 
     @include media($mobile) {
         font-size: 3em;
@@ -350,15 +493,18 @@ h2.section_title {
 
         .text_bar {
             position: absolute;
-            top: 0;
-            left: 0;
-            background: url('../images/text-bg.png') no-repeat;
+            top: 10px;
+            left: 10px;
+            background: url('../../images/text-bg.png') no-repeat;
             background-size: 100% 100%;
             color: $white;
             padding: 6px 26px 6px 8px;
+            /*background: #b10000;*/
+            border-top-left-radius: 8px;
+            border-bottom-right-radius: 8px;
 
             p {
-                @include opensanssemibold;
+                @include montreg;
                 text-transform: uppercase;
 
                 @include media($mobile) {
@@ -366,7 +512,7 @@ h2.section_title {
                 }
 
                 span {
-                    @include opensansregular;
+                    @include montreg;
                     font-size: 12px;
                     text-transform: none;
                 }
@@ -375,10 +521,12 @@ h2.section_title {
 
         .image_wrap {
             padding: 10px;
-            border: 1px solid $red;
+            border: 1px solid #ff0000;
+            border-radius: 12px;
 
             img {
                 border: 1px solid $red;
+                border-radius: 8px;
             }
         }
 
@@ -418,22 +566,19 @@ h2.section_title {
 }
 
 .shows_section {
-    background: url('../images/shows-bg.jpg') no-repeat;
+    background: url('../../images/shows-bg.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
+    min-height: 550px;
 
     p {
-        color: $pink;
-    }
-
-    h4 {
-       @include opensanssemibold;
-        font-size: 14px;
+        @include montmed;
         color: $white;
     }
 
-    h5 {
-        font-size: 14px;
+    h3 {
+       @include montmed;
+        font-size: 16px;
         color: $white;
     }
 
@@ -447,32 +592,93 @@ h2.section_title {
             padding: 10px 0;
         }
 
-        .column {
-            @include span-columns(7);
+        .my_row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-            @include media($smallMobile) {
+        .column {
+            @include span-columns(3);
+
+            @include media($mobile) {
                 @include span-columns(4);
             }
 
+            &:nth-child(2) {
+                @include span-columns(6);
+
+                @include media($mobile) {
+                    @include span-columns(4);
+                    margin-bottom: 20px;
+                }
+            }
+
             &:first-child {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                @include media($mobile) {
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: flex-end;
+
+                @include media($mobile) {
+                    justify-content: center;
+                }
+            }
+
+           /* &:first-child {
                 @include span-columns(5);
 
                 @include media($smallMobile) {
                     @include span-columns(4);
                 }
-            }
+            }*/
         }
     }
 }
 
 .contact_section {
-    background: url('../images/contact-bg.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url('../../images/cartoonband.jpg') no-repeat;
+    background-size: contain;
+    background-position: center 50%;
+
+    @include media($smallMobile) {
+        background-size: 100%;
+        background-position: top center;
+    }
+
+    &:before {
+        content: '';
+        background: rgba(0,0,0, .9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     .form_wrap {
         width: 35%;
         margin: 0 auto;
+        background: rgba(255,255,255,.1);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
 
         @include media($tablet) {
             width: 60%;
@@ -489,6 +695,20 @@ h2.section_title {
 
     .success_message {
         color: $white;
+        min-height: 500px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
     }
 
 }
@@ -500,4 +720,61 @@ footer {
         font-size: 14px;
         color: $lightGray;
     }
+}
+
+
+#spinner {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    background: rgba(0,0,0,.4);
+    z-index: 999;
+}
+
+#spinner.active {
+    display: flex;
+}
+
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg) /* rtl:ignore */;
+    }
+}
+.spinner-border {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    vertical-align: -0.125em;
+    border: 0.55em solid #ffffff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 0.75s linear infinite spinner-border;
+    animation: 0.75s linear infinite spinner-border;
+}
+
+@-webkit-keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner-border {
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+    }
+}
+
+span#message-error, span#name-error, span#email-error{
+    color: red;
 }
