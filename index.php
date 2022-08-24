@@ -99,14 +99,22 @@ include 'header.php';
                 <div class="full_width my_row d-block d-sm-flex">
                     <div class="column animatedParent animateOnce">
                         <div class="full_width animated bounceInLeft">
-                            <div class="image_wrap">
-                                <img src="images/img-vocals.jpg" alt="">
+                            <div class="image_wrap vocals">
+                                <img src="images/img-singer.png" alt="">
                                 <div class="text_bar">
-                                    <p>Walter aka camillo Rizen <span>(Vocals)</span></p>
+                                    <p><span>(Vocals)</span></p>
                                 </div>
+	                            <div class="overlay_text">
+		                            <p>
+			                            Looking for a new singer!
+		                            </p>
+		                            <p>
+			                            Hit Us Up If Interested!
+		                            </p>
+	                            </div>
                             </div>
                             <div class="description">
-                                <p>Vocals, guitar and keys. Influenced by James Brown, Muddy Waters, Rolling Stones, Led Zeppelin, Soundgarden, Living Colour, Chili Peppers and The Ojays</p>
+                                <p>Seeking new singer. Need an energetic, experienced, poetic, rocky, baddass mutha. Listen to our music here on our site, on Facebook, Instagram and YouTube and hit us up if you think you'd be a great fit!</p>
                             </div>
                         </div>
                     </div>
@@ -207,17 +215,17 @@ include 'header.php';
                 <ul class="list-unstyled full_width animatedParent animateOnce">
                     <li class="full_width animated fadeInLeft">
                         <div class="my_row">
-	                        <div class="column text-left text-sm-center">
+	                        <!--<div class="column text-left text-sm-center">
 		                        <p class="mr-1">Fri Sept 2nd - </p>
 		                        <p>Time TBD</p>
+	                        </div>-->
+	                        <div class="column w-100 text-center">
+		                        <h3 class="mr-1 mb-1 mb-sm-0">All Shows On Hold Until We Find A Singer</h3>
+		                        <!--<h3>26920 Nn-333, Waynesville, MO</h3>-->
 	                        </div>
-	                        <div class="column text-center">
-		                        <h3 class="mr-1 mb-1 mb-sm-0">Midwest Bearfest</h3>
-		                        <h3>26920 Nn-333, Waynesville, MO</h3>
-	                        </div>
-	                        <div class="column text-left">
+	                        <!--<div class="column text-left">
 		                        <a class="button white text-uppercase" href="https://www.universe.com/events/midwest-bearfest-2022-tickets-G6HDN5?fbclid=IwAR1-Hw-0CVi3v4ZZGB-Ih0opr_iq0d9KTDAMdVH34sQt2vw7vmDPV1zbi9U" target="_blank">GET TICKETS NOW!</a>
-	                        </div>
+	                        </div>-->
                         </div>
                     </li>
                 </ul>

@@ -190,8 +190,8 @@
                 &:before {
                     content: '';
                     position: absolute;
-                    height: 26px;
-                    top: 1px;
+                    height: 24px;
+                    top: 3px;
                     left: 0;
                     width: 100%;
                     z-index: 1;
@@ -528,6 +528,39 @@ h2.section_title {
                 border: 1px solid $red;
                 border-radius: 8px;
             }
+
+            &.vocals {
+                background: rgba(56,0,0,.6);
+            }
+        }
+
+        .overlay_text {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+
+            p {
+                color: $white;
+                font-size: 24px;
+                text-transform: uppercase;
+
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+            }
         }
 
         .description {
@@ -634,11 +667,11 @@ h2.section_title {
 
             &:last-child {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
 
-                @include media($mobile) {
+                /*@include media($mobile) {
                     justify-content: center;
-                }
+                }*/
             }
 
            /* &:first-child {
@@ -653,7 +686,7 @@ h2.section_title {
 }
 
 .contact_section {
-    background: url('../../images/cartoonband.jpg') no-repeat;
+    background: url('../../images/cartoonband.png') no-repeat;
     background-size: contain;
     background-position: center 50%;
 
